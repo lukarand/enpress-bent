@@ -1,0 +1,10 @@
+.section-warranty {
+  background: linear-gradient(to right, rgba(230,238,244,1) 0%, rgba(255,255,255,1) 100%);
+  @include media-breakpoint-down('sm'){
+    background: linear-gradient(to top, rgba(230,238,244,1) 0%, rgba(255,255,255,1) 100%);
+  }
+  .warranty-image {
+    width: 466px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+.list-pin {
+  padding-left: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  
+  li {
+    font-size: $font-size-base * 1.25;
+    font-weight: $font-weight-bold;
+    align-items: top;
+    width: 50%;
+    display: flex;
+    margin-bottom: 10px;
+    &:before {
+      font-family: '#{$icomoon-font-family}';
+      content: $icon-pin;
+      color: $primary;
+      font-size: $font-size-base * 1.25;
+      line-height: 1.5;
+      padding-right: 24px;
+    }
+  }
+}

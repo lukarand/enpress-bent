@@ -1,0 +1,99 @@
+
+.table {
+  margin-bottom: 0;
+}
+table {
+  &.table-color-range {
+    tbody {
+      tr {
+        td {
+          vertical-align: middle;
+          &.color-cell {
+            width: 60px;
+            @include media-breakpoint-down('md') {
+              width: 40px;
+            }
+            span {
+              display: block;
+              width: 32px;
+              height: 32px;
+              border-radius: 32px;
+            }
+          }
+          &.name-cell {
+            min-width: 150px;
+            @include media-breakpoint-down('sm') {
+              font-size: $font-size-base;
+            }
+          }
+          &.feature-cell {
+            padding: 0;
+            width: 60px;
+            position: relative;
+            span {
+              top: 0;
+              left: 0;
+              position: absolute;
+              display: block;
+              height: 100%;
+              width: 100%;
+              background-color: $gray-100;
+              text-align: center;
+              font-size: $font-size-xs;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              &::before {
+                display: block;
+                content: $icon-cross;
+                font-family: '#{$icomoon-font-family}';
+                font-size: 22px;
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.table-detail-range {
+    tbody {
+      tr {
+        td {
+          vertical-align: middle;
+          &.name-cell {
+            min-width: 150px;
+            font-size: 18px;
+            font-weight: $font-weight-bold;
+          }
+          &.feature-cell {
+            padding: 0;
+            width: 60px;
+            position: relative;
+            span {
+              top: 0;
+              left: 0;
+              position: absolute;
+              display: block;
+              height: 100%;
+              width: 100%;
+              background-color: $gray-100;
+              text-align: center;
+              font-size: $font-size-xs;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              &::before {
+                display: block;
+                content: $icon-cross;
+                font-family: '#{$icomoon-font-family}';
+                font-size: 22px;
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

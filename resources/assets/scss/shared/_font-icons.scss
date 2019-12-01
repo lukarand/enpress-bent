@@ -1,0 +1,47 @@
+$icomoon-font-family: "BentIcon" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$icon-chevron: "\25be";
+$icon-cross: "\2715";
+$icon-pin: "\25c9";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q2e8ng');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q2e8ng#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?q2e8ng') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?q2e8ng') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron {
+  &:before {
+    content: $icon-chevron; 
+  }
+}
+.icon-cross {
+  &:before {
+    content: $icon-cross; 
+  }
+}
+.icon-pin {
+  &:before {
+    content: $icon-pin; 
+  }
+}

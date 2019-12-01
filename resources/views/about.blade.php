@@ -1,0 +1,10 @@
+@extends('layouts.app')
+@section ('content')
+    @include('sections.about-hero')
+    @include('sections.company')
+    @include('sections.stock')
+    @include('sections.transport')
+    @include('sections.warranty')
+    @include('sections.range')
+    @include('sections.contact')
+@endsection

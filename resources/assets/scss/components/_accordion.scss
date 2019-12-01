@@ -1,0 +1,27 @@
+.accordion {
+  .accordion-item {
+    &:not(:first-child) {
+      margin-top: $spacer / 4;
+    }
+  }
+  .btn {
+    &:focus, &:active {
+      box-shadow: none;
+    }
+    
+    &:before {
+      transition: transform .4s ease;
+      font-family: '#{$icomoon-font-family}';
+      content: $icon-chevron;
+      font-size: $font-size-base;
+      margin-top: auto;
+      height: auto;
+    }
+    &[aria-expanded="true"] {
+      &:before {
+        transform: rotate(-180deg);
+        transform-origin: center;
+      }
+    }
+  }
+}

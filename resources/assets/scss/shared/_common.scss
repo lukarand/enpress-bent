@@ -1,0 +1,53 @@
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+.btn {
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle;
+  &:before {
+    float: right;
+    font-size: 2em;
+    height: 0;
+    margin-top: -.35em;
+    content: "\00a0\00a0\2192";
+  }
+}
+.title-underline {
+  position: relative;
+  padding-bottom: $spacer * 1.5;
+  margin-bottom: $spacer * 1.5;
+  &:before {
+    position: absolute;
+    width: 50px;
+    content: "";
+    border-bottom: 2px solid;
+    bottom: 0;
+  }
+  &.title-underline-center {
+    &:before {
+      left: 50%;
+      margin-left: -25px;
+    }
+  }
+  &.title-underline-md-left {
+    &:before {
+      @include media-breakpoint-up('md') {
+        left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}

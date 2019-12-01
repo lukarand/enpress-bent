@@ -1,0 +1,60 @@
+.section-hero {
+  position: relative;
+  .hero-video {
+    position: relative;
+    @include media-breakpoint-down('sm') {
+      height: 331px;
+    }
+    video {
+      @include media-breakpoint-up('md') {
+        width: 100%;
+        height: auto;
+      }
+      @include media-breakpoint-down('md') {
+        width: auto;
+        transform: translateX(-25%);
+      }
+      @include media-breakpoint-down('sm') {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        margin: auto;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+  }
+}
+
+.section-about-hero {
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  @include media-breakpoint-down('sm'){
+    min-height: 331px;
+    background-position: 700px 329px;
+  }
+  .about-hero-title {
+    width: 761px;
+    height: auto;
+    @include media-breakpoint-down('sm') {
+      width: 343px;
+    }
+  }
+}
+.section-product-hero {
+  min-height: 504px;
+  background-size: cover;
+  background-position: center;
+  @include media-breakpoint-down('sm'){
+    min-height: 331px;
+  }
+  .product-hero-title {
+    width: 761px;
+    height: auto;
+    @include media-breakpoint-down('sm') {
+      width: 343px;
+    }
+  }
+}

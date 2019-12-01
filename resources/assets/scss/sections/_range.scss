@@ -1,0 +1,11 @@
+
+.section-detail-range {
+  .btn {
+    text-align: left;
+    text-transform: uppercase;
+    vertical-align: middle;
+    &:before {
+      content: "";
+    }
+  }
+}

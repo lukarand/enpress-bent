@@ -1,0 +1,14 @@
+.partner-logos {
+  .logo-item {
+    img {
+      display: block;
+      width: 207px;
+      margin: 0 46px;
+      height: auto;
+      @include media-breakpoint-down('sm') {
+        width: 133px;
+        margin: 0 27px;
+      }
+    }
+  }
+}

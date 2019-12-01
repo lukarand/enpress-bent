@@ -1,0 +1,101 @@
+.navbar {
+  &.navbar-main {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    .navbar-brand {
+      position: relative;
+      width: 180px;
+      @include media-breakpoint-up('lg') {
+        margin-left: $spacer * 3;
+      }
+      @include media-breakpoint-down('md') {
+        margin-left: $spacer / 2.5;
+      }
+      img {
+        top: $spacer * 0.75;
+        @include media-breakpoint-down('md') {
+          top: -2px;
+        }
+        position: absolute;
+        width: 180px;
+        height: auto;
+      }
+    }
+    .navbar-toggler {
+      width: 78px;
+      height: 78px;
+      background-color: $primary;
+      padding: 0 22px;
+      position: relative;
+
+      span {
+        &:not(:last-of-type) {
+          margin-bottom: 6px;
+        }
+        height: 3px;
+        width: 32px;
+        background-color: $white;
+        border-radius: 2px;
+        display: block;
+        @include transition(transform .5s ease);
+      }
+      
+      &[aria-expanded="true"] {
+        span {
+          position: absolute;
+          top: 36px;
+          &:first-child {
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            visibility: hidden;
+          }
+          &:last-child {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        &.active {
+          .nav-link {
+            position: relative;
+            @include media-breakpoint-up('lg') {
+              &:after {
+                position: absolute;
+                bottom: 0;
+                height: 0;
+                content: "";
+                left: $navbar-nav-link-padding-x;
+                right: $navbar-nav-link-padding-x;
+                border-bottom: 4px solid $primary;
+              }
+            }
+          }
+        }
+      }
+      .nav-link {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        @include media-breakpoint-down('md') {
+          text-align: center;
+          font-size: $font-size-base * 1.875;
+          padding: 12px;
+        }
+      }
+    }
+    .navbar-quote {
+      height: 78px;
+      padding-top: 26px;
+      font-size: $font-size-base;
+      @include media-breakpoint-down('md') {
+        margin-top: 24px;
+        display: block;
+      }
+    }
+  }
+}
+
